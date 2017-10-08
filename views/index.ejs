@@ -1,13 +1,15 @@
 <% include header.ejs %>
 
-<ul class="main-gallery-ul">
-<% for(var i = 0; i < pieces.length; i++) { %>
-    <li class="main-gallery-li">
-        <a href="pieces/<%= pieces[i] %>">
-            <img src="pieces/<%= pieces[i] %>/thumbnail.jpg" style="width:100%" />
-        </a>
-    </li>
-<% } %>
-</ul>
+<div class="main-gallery">
+    <ul>
+    <% for(var i = 0; i < pieces.length; i++) { %>
+        <li>
+            <a href="pieces/<%= pieces[i] %>">
+                <img src="pieces/<%= pieces[i] %>/thumbnail.jpg" style="width:100%" />
+            </a>
+        </li>
+    <% } %>
+    </ul>
+</div>
 
 <% include footer.ejs %>

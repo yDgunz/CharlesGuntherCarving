@@ -6,7 +6,11 @@
     <div class="col-md-6">
         <ul class="piece-gallery-ul">
             <% for(var i = 0; i < gallery.length; i++) { %>
-                <li class="piece-gallery-li"><img src="../<%= name %>/<%= gallery[i] %>" style="width:100%" /></li>
+                <li class="piece-gallery-li">
+                    <a href="../<%= name %>/<%= gallery[i] %>" data-lightbox="gallery">
+                        <img src="../<%= name %>/<%= gallery[i] %>" style="width:100%" />
+                    </a>
+                </li>
             <% } %>
         </ul>
     </div>

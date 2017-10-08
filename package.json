@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "main": "server.js",
   "dependencies": {
-    "express": "latest",
-    "ejs" : "latest",
     "body-parser": "latest",
-    "morgan": "latest",
-    "js-yaml": "latest"
+    "ejs": "latest",
+    "express": "latest",
+    "js-yaml": "latest",
+    "lightbox2": "^2.9.0",
+    "morgan": "latest"
   },
   "engines": {
     "node": "latest",
