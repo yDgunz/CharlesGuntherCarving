@@ -1,0 +1,19 @@
+<% include header.ejs %>
+
+<hr/>
+
+<div class="row">
+    <div class="col-md-6">
+        <ul class="piece-gallery-ul">
+            <% for(var i = 0; i < gallery.length; i++) { %>
+                <li class="piece-gallery-li"><img src="../<%= name %>/<%= gallery[i] %>" style="width:100%" /></li>
+            <% } %>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <h2><b><%= info.display_name %></b></h2>
+        <p><%= info.description %></p>
+    </div>
+</div>
+
+<% include footer.ejs %>

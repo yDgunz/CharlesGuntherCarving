@@ -1,0 +1,16 @@
+{
+  "name": "CharlesGuntherCarving",
+  "version": "0.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "express": "latest",
+    "ejs" : "latest",
+    "body-parser": "latest",
+    "morgan": "latest",
+    "js-yaml": "latest"
+  },
+  "engines": {
+    "node": "latest",
+    "npm": "latest"
+  }
+}
