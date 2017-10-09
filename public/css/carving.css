@@ -1,5 +1,6 @@
 img {
     width: 100%;
+    border: 1px solid grey;
 }
 
 .header {
@@ -26,8 +27,18 @@ body {
     width: 33%;
 }
 
+.main-gallery img {
+    -webkit-transition: .2s all;
+}
+
 .main-gallery img:hover {
-    opacity: 0.9;
+    -webkit-filter: brightness(50%);
+}
+
+.gallery-label {
+    color: white;
+    position: relative;
+    top: 20px;
 }
 
 .piece-gallery-ul {
