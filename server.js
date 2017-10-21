@@ -41,7 +41,7 @@ router.get('/about', function(req,res) {
 router.get('/pieces/:piece_name', function(req,res) {
     var data = {};
     data.name = req.params.piece_name;
-    data.gallery = fs.readdirSync("public/pieces/"+data.name).filter(function(filename) { return filename.toLowerCase().includes(".jpg"); });
+    data.gallery = fs.readdirSync("public/pieces/"+data.name).filter(function(filename) { return filename.toLowerCase().includes(".jpg") && filename.toLowerCase() != "thumbnail.jpg" });
     data.info = yaml.safeLoad(fs.readFileSync('public/pieces/' + data.name + '/info.yaml', 'utf8'));
     res.render('piece.ejs', data);
 });

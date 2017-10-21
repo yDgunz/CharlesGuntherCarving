@@ -3,13 +3,23 @@ img {
     border: 1px solid grey;
 }
 
+h1 {
+    font-family: 'Italianno', cursive;
+    margin-bottom: 0;
+    font-size: 4em;
+}
+
 .header {
     padding: 5px;
 }
 
+hr {
+    margin-top: 0px;
+    margin-bottom: 1em;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
-    font-weight: '100';
 }
 
 .main-gallery ul {
@@ -27,12 +37,8 @@ body {
     width: 33%;
 }
 
-.main-gallery img {
-    -webkit-transition: .2s all;
-}
-
 .main-gallery img:hover {
-    -webkit-filter: brightness(50%);
+    opacity: .9;
 }
 
 .gallery-label {
@@ -62,9 +68,12 @@ a {
 }
 
 a:hover {
-    font-weight: bold;
     text-decoration: none;
     color: black;
+}
+
+.navigation a:hover {
+    font-weight: bold;
 }
 
 footer {
