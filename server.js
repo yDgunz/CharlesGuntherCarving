@@ -29,20 +29,25 @@ app.set('view engine', 'ejs'); // set up ejs for templating
 var router = express.Router();
 
 router.get('', function(req,res) {
-    var data = {};
-    data.pieces = fs.readdirSync("public/pieces");
-    res.render('index.ejs', data);
+    res.render('index.ejs');
 });
 
 router.get('/about', function(req,res) {
     res.render('about.ejs');
 });
 
-router.get('/pieces/:piece_name', function(req,res) {
+router.get('/:gallery', function(req,res) {
+    var data = {};
+    data.pieces = fs.readdirSync("public/pieces/" + req.params.gallery);
+    res.render(req.params.gallery + '.ejs', data);
+});
+
+router.get('/pieces/:gallery/:piece_name', function(req,res) {
     var data = {};
     data.name = req.params.piece_name;
-    data.gallery = fs.readdirSync("public/pieces/"+data.name).filter(function(filename) { return filename.toLowerCase().includes(".jpg") && filename.toLowerCase() != "thumbnail.jpg" });
-    data.info = yaml.safeLoad(fs.readFileSync('public/pieces/' + data.name + '/info.yaml', 'utf8'));
+    data.gallery_name = req.params.gallery;
+    data.gallery = fs.readdirSync("public/pieces/"+data.gallery_name+"/"+data.name).filter(function(filename) { return filename.toLowerCase().includes(".jpg") && filename.toLowerCase() != "thumbnail.jpg" });
+    data.info = yaml.safeLoad(fs.readFileSync('public/pieces/' + data.gallery_name + '/' + data.name + '/info.yaml', 'utf8'));
     res.render('piece.ejs', data);
 });
 

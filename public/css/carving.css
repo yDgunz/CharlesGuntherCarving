@@ -1,12 +1,41 @@
+body {
+    background-color: #eee;
+    height: 100%;
+}
+
+.container {
+    background-color: white;
+    border: 1px solid grey;
+    margin-top: 10px;
+}
+
 img {
     width: 100%;
     border: 1px solid grey;
 }
 
+.main-nav-image {
+    position: relative;
+    width: 100%;
+}
+
+.main-nav-image h2 {
+    position: absolute; 
+    bottom: 10px; 
+    left: 0px; 
+    width: 100%; 
+}
+
+.main-nav-image span {
+    color: black;
+    letter-spacing: -1px;  
+    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+}
+
 h1 {
-    font-family: 'Italianno', cursive;
     margin-bottom: 0;
-    font-size: 4em;
 }
 
 .header {
@@ -38,6 +67,10 @@ body {
 }
 
 .main-gallery img:hover {
+    opacity: .9;
+}
+
+.main-nav-image img:hover {
     opacity: .9;
 }
 

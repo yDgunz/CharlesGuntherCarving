@@ -1,15 +1,56 @@
 <% include header.ejs %>
 
-<div class="main-gallery">
-    <ul>
-    <% for(var i = 0; i < pieces.length; i++) { %>
-        <li>
-            <a href="pieces/<%= pieces[i] %>">
-                <img src="pieces/<%= pieces[i] %>/thumbnail.jpg" style="width:100%" />
-            </a>
-        </li>
-    <% } %>
-    </ul>
+<div class="row">
+    <div class="col-md-4">
+        <a href="/birds_of_prey">
+            <div class="main-nav-image">
+                <img src="images/main_nav/birds_of_prey.jpg" />
+                <h2><span>Birds of Prey</span></h2>
+            </div>        
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="/songbirds">
+            <div class="main-nav-image">
+                <img src="images/main_nav/songbirds.jpg" />
+                <h2><span>Songbirds</span></h2>
+            </div>        
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="decorative">
+            <div class="main-nav-image">
+                <img src="images/main_nav/decorative.jpg" />
+                <h2><span>Decorative</span></h2>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="row" style="padding-top:20px">
+    <div class="col-md-4">
+        <a href="smoothies">
+            <div class="main-nav-image">
+                <img src="images/main_nav/smoothies.jpg" />
+                <h2><span>Smoothies</span></h2>
+            </div>        
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="in_progress">
+            <div class="main-nav-image">
+                <img src="images/main_nav/in_progress.jpg" />
+                <h2><span>In Progress</span></h2>
+            </div>        
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="about">
+            <div class="main-nav-image">
+                <img src="images/main_nav/about.jpg" />
+                <h2><span>About</span></h2>
+            </div>        
+        </a>
+    </div>
 </div>
 
 <% include footer.ejs %>

@@ -1,0 +1,21 @@
+<% include header.ejs %>
+
+<div class="main-gallery">
+    <div style="text-align:center">
+        <h2>Songbirds</h2>
+    </div>
+    <p>
+    Something about songbirds.
+    </p>
+    <ul>
+    <% for(var i = 0; i < pieces.length; i++) { %>
+        <li>
+            <a href="pieces/songbirds/<%= pieces[i] %>">
+                <img src="pieces/songbirds/<%= pieces[i] %>/thumbnail.jpg" style="width:100%" />
+            </a>
+        </li>
+    <% } %>
+    </ul>
+</div>
+
+<% include footer.ejs %>
