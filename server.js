@@ -36,6 +36,10 @@ router.get('/about', function(req,res) {
     res.render('about.ejs');
 });
 
+router.get('/contact', function(req,res) {
+    res.render('contact.ejs');
+});
+
 router.get('/:gallery', function(req,res) {
     var data = {};
     data.pieces = fs.readdirSync("public/pieces/" + req.params.gallery);
