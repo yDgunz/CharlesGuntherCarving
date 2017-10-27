@@ -91,16 +91,12 @@ body {
     padding: 15px;
 }
 
-.navigation {    
-    text-align: right;
-}
-
-a {
+.navigation a {
     color: black;
     text-decoration: none;
 }
 
-a:hover {
+.navigation a:hover {
     text-decoration: none;
     color: black;
 }
