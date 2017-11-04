@@ -65,7 +65,6 @@ hr {
 .main-gallery li {
     display: block;
     float: left;
-    display: block;
     padding: 15px;
     width: 33%;
 }
@@ -93,6 +92,9 @@ hr {
 
 .piece-gallery-li {
     padding: 15px;
+    display: block;
+    float: left;
+    width: 100%;
 }
 
 .navigation a {
