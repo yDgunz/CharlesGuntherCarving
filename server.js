@@ -40,6 +40,10 @@ router.get('/contact', function(req,res) {
     res.render('contact.ejs');
 });
 
+router.get('/in_progress', function(req,res) {
+    res.render('in_progress.ejs');
+});
+
 router.get('/:gallery', function(req,res) {
     var data = {};
     data.pieces = fs.readdirSync("public/pieces/" + req.params.gallery);
