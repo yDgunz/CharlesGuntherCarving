@@ -1,14 +1,14 @@
 <% include header.ejs %>
 
-<div class="row">
+<div class="row main-gallery">
     <div class="col-md-2"></div>
     <div class="col-md-8">
         <h2><%= info.display_name %></h2>
         <p><i><%= info.medium %></i></p>
         <p><%= info.description %></p>
-        <ul class="piece-gallery-ul">
+        <ul>
             <% for(var i = 0; i < gallery.length; i++) { %>
-                <li class="piece-gallery-li">
+                <li>
                     <a href="../<%= name %>/<%= gallery[i] %>" data-lightbox="gallery">
                         <img src="../<%= name %>/<%= gallery[i] %>" />
                     </a>
