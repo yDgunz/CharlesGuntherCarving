@@ -5,17 +5,21 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-/*
-.container {
-    background-color: white;
-    border: 1px solid grey;
-    margin-top: 10px;
+
+.header-container {
+    background-color: #f0f0f0;
+    padding-top: 1em;
+    border-bottom: black 2px solid;
 }
-*/
+
+.main-container {
+    padding: 1em 2em 2em 2em;
+}
+
 
 img {
     width: 100%;
-    border: 1px solid #dddddd;
+    border: 2px solid black;
 }
 
 .main-nav-image {
@@ -25,29 +29,17 @@ img {
 
 .main-nav-image h2 {
     position: absolute; 
-    bottom: 10px; 
+    bottom: .5em; 
     left: 0px; 
-    width: 100%; 
+    width: 100%;
+    font-weight: 900;
 }
 
 .main-nav-image span {
     color: black;
     letter-spacing: -1px;  
-    background: rgb(255, 255, 255);
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0);
     padding: 10px;
-}
-
-h1 {
-    margin-bottom: 0;
-}
-
-h2 {
-    font-weight: bold;
-}
-
-.header {
-    padding: 5px;
 }
 
 hr {
@@ -65,7 +57,7 @@ hr {
 .main-gallery li {
     display: block;
     float: left;
-    padding: 15px;
+    padding: 1em;
     width: 33%;
 }
 
@@ -105,6 +97,10 @@ hr {
 .navigation a:hover {
     text-decoration: none;
     color: black;
+}
+
+.navigation h4 {
+    font-weight: bold;
 }
 
 .navigation a:hover {
