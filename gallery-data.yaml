@@ -1,0 +1,85 @@
+galleries:
+  - name: decorative
+    display_name: Decorative
+    description: Hyper realistic pieces.
+    pieces:
+      - name: black_duck
+        display_name: Black Duck
+        scientific_name: Anas Rubripes
+        medium: Tupelo & Oil
+      - name: blue_wing_teal
+        display_name: Blue Winged Teal
+        scientific_name: Spatula Discors
+        medium: Tupelo & Oil
+      - name: canada_goose
+        display_name: Canada Goose
+        scientific_name: Branta Canadensis
+        medium: Tupelo & Oil
+      - name: hornbill
+        display_name: Blyth's Hornbill
+        scientific_name: Rhyticeros Plicatus
+        medium: Tupelo & Acrylic - Inspired by Peter Zaluzec's 1992 World Entry
+      - name: loon
+        display_name: Common Loon
+        scientific_name: Gavia Immer
+        medium: Tupelo & Oil
+      - name: mallard_drake
+        display_name: Mallard
+        scientific_name: Anas Platyrhynchos
+        medium: Tupelo & Oil
+      - name: pied_bill_grebe
+        display_name: Pied-billed Grebe
+        scientific_name: Podilymbus Podiceps
+        medium: Tupelo & Oil
+      - name: redhead
+        display_name: Redhead
+        scientific_name: Aythya Americana
+        medium: Tupelo & Oil
+  - name: birds_of_prey
+    display_name: Raptors
+    description: Birds of prey.
+    pieces:
+      - name: kestral
+        display_name: American Kestrel
+        scientific_name: Falco Sparverius
+        medium: Tupelo & Oil
+      - name: kestral2
+        display_name: American Kestrel
+        scientific_name: Falco Sparverius
+        medium: Tupelo & Acrylic
+      - name: peregrine_falcon
+        display_name: Peregrine Falcon
+        scientific_name: Falco Peregrinus
+        medium: Tupelo & Oil
+      - name: screech_owl
+        display_name: Screech Owl
+        scientific_name: Megascops Asio
+        medium: Tupelo & Oil
+  - name: songbirds
+    display_name: Songbirds
+    description: Songbirds.
+    pieces:
+      - name: blue_jay
+        display_name: Blue Jay
+        scientific_name: Cyanocitta Cristata
+        medium: Tupelo & Acrylic
+      - name: robin
+        display_name: American Robin
+        scientific_name: Turdus Migratorius
+        medium: Tupelo & Oil on Walnut
+  - name: smoothies
+    display_name: Smoothies
+    description: Smoothies.
+    pieces:
+      - name: mallard_hen_smoothie
+        display_name: Mallard
+        scientific_name: Anas Platyrhynchos
+        medium: Tupelo & Oil
+      - name: pied_bill_grebe_smoothie
+        display_name: Pied-billed Grebe
+        scientific_name: Podilymbus Podiceps
+        medium: Tupelo & Oil
+      - name: wigeon
+        display_name: American Wigeon
+        scientific_name: Anas Americana
+        medium: Tupelo & Acrylic

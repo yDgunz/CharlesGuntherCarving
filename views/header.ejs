@@ -1,41 +1,81 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-<head>
-    
-    <!-- Global Site Tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107858480-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107858480-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'UA-107858480-1');
-    </script>
+        gtag('config', 'UA-107858480-1');
+        </script>
+	
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
 
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Charles Gunther Carving</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Charles Gunther Carving</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
-    <link rel="stylesheet" href="/css/carving.css">
+        <!-- Bootstrap CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
+        <link rel="stylesheet" href="/css/carving.css">
 
-    <link href="/css/lightbox.min.css" rel="stylesheet">
+        <link href="/css/lightbox.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-</head>
-<body>
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
 
-<div class="container-fluid header-container">
+							<!-- Logo -->
+							<span class="title logo raleway">
+								<a href="/">
+									Charles Gunther Carving
+								</a>
+								<% if(typeof subtitle == 'string' && typeof subtitle_link == 'string') { %>								
+								/ <a href="/gallery/<%= subtitle_link %>"><%= subtitle %></a>
+								<% } else if(typeof subtitle == 'string') { %>								
+								/ <%= subtitle %>
+								<% } %>
+							</span>
 
-    <div class="row header">
-        <div class="col-md-8 navigation">
-            <h1><a href="/">Charles Gunther Carving</a></h1>
-        </div>
-        <div class="col-md-4 navigation" style="text-align: right">
-            <h4><a href="/">Home</a> | <a href="/about">About</a> | <a href="/contact">Contact</a></h4>
-        </div>
-    </div>
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
 
-</div>
-<div class="container-fluid main-container">
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul>
+							<li><a href="/">Home</a></li>							
+							<li><a href="/gallery/decorative">Decorative</a></li>
+							<li><a href="/gallery/birds_of_prey">Raptors</a></li>
+							<li><a href="/gallery/songbirds">Songbirds</a></li>
+                            <li><a href="/gallery/smoothies">Smoothies</a></li>
+                            <li><a href="/in_progress">In Progress</a></li>
+                            <li><a href="/about">About</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">

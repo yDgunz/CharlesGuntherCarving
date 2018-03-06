@@ -1,0 +1,18 @@
+<% include header.ejs %>
+
+<section class="tiles">        
+    <% gallery.pieces.forEach(function(piece) { %>
+    <article class="style1">
+        <span class="image">
+            <img src="/pieces/<%= gallery.name %>/<%= piece.name %>/thumbnail.jpg" alt="" />
+        </span>
+        <a href="/gallery/<%= gallery.name %>/<%= piece.name %>">            
+            <div class="content">
+                <h2><%= piece.display_name %></h2>                
+            </div>
+        </a>
+    </article>
+    <% }); %>
+</section>
+
+<% include footer.ejs %>

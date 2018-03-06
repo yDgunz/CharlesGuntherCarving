@@ -1,20 +1,17 @@
 <% include header.ejs %>
 
-<div class="row main-gallery">
-    <div class="col-md-12">
-        <h3><%= info.display_name %></h3>
-        <p><i><%= info.medium %></i></p>
-        <p><%= info.description %></p>
-        <ul>
-            <% for(var i = 0; i < gallery.length; i++) { %>
-                <li>
-                    <a href="../<%= name %>/<%= gallery[i] %>" data-lightbox="gallery">
-                        <img src="../<%= name %>/<%= gallery[i] %>" />
-                    </a>
-                </li>
-            <% } %>
-        </ul>
-    </div>
-</div>
+<h4 class="raleway"><%= piece.display_name %> (<%= piece.scientific_name %>) - <%= piece.medium %></h4>
+
+<section class="tiles">        
+    <% images.forEach(function(image) { %>
+    <article class="style1">
+        <span class="image">
+            <img src="/pieces/<%= gallery.name %>/<%= piece.name %>/<%= image %>" alt="" />
+        </span>
+        <a href="/pieces/<%= gallery.name %>/<%= piece.name %>/<%= image %>" data-lightbox="gallery">            
+        </a>
+    </article>
+    <% }); %>
+</section>
 
 <% include footer.ejs %>

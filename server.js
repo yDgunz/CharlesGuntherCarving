@@ -24,39 +24,49 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 app.set('view engine', 'ejs'); // set up ejs for templating
 
+var data = {galleryData: yaml.safeLoad(fs.readFileSync('gallery-data.yaml', 'utf8'))};
+
 // ROUTES FOR OUR API
 // =============================================================================
 var router = express.Router();
 
 router.get('', function(req,res) {
-    res.render('index.ejs');
+    res.render('index.ejs', data);
 });
 
-router.get('/about', function(req,res) {
-    res.render('about.ejs');
+router.get('/:page', function(req,res) {
+    var subtitle = "";
+    if (req.params.page == "in_progress") {
+        subtitle = "In Progress";
+    } else if (req.params.page == "about") {
+        subtitle = "The Artist";
+    }
+    res.render(req.params.page + '.ejs', {subtitle: subtitle});
 });
 
-router.get('/contact', function(req,res) {
-    res.render('contact.ejs');
+router.get('/gallery/:gallery', function(req,res) {    
+    var gallery = data.galleryData.galleries.find(function(x) { return x.name == req.params.gallery});
+    res.render('gallery.ejs', 
+        {
+            subtitle: gallery.display_name,
+            gallery: gallery
+        }
+    );
 });
 
-router.get('/in_progress', function(req,res) {
-    res.render('in_progress.ejs');
-});
-
-router.get('/:gallery', function(req,res) {
-    var data = {};
-    data.pieces = fs.readdirSync("public/pieces/" + req.params.gallery);
-    res.render(req.params.gallery + '.ejs', data);
-});
-
-router.get('/pieces/:gallery/:piece_name', function(req,res) {
-    var data = {};
-    data.name = req.params.piece_name;
-    data.gallery_name = req.params.gallery;
-    data.gallery = fs.readdirSync("public/pieces/"+data.gallery_name+"/"+data.name).filter(function(filename) { return filename.toLowerCase().includes(".jpg") && filename.toLowerCase() != "thumbnail.jpg" });
-    data.info = yaml.safeLoad(fs.readFileSync('public/pieces/' + data.gallery_name + '/' + data.name + '/info.yaml', 'utf8'));
-    res.render('piece.ejs', data);
+router.get('/gallery/:gallery/:piece_name', function(req,res) {
+    var gallery = data.galleryData.galleries.find(function(x) { return x.name == req.params.gallery; });
+    var piece = gallery.pieces.find(function(x) { return x.name == req.params.piece_name; });
+    var images = fs.readdirSync("public/pieces/"+gallery.name+"/"+piece.name).filter(function(filename) { return filename.toLowerCase().includes(".jpg") && filename.toLowerCase() != "thumbnail.jpg" });
+    res.render('piece.ejs', 
+        {
+            gallery: gallery,
+            piece: piece,
+            images: images,
+            subtitle: gallery.display_name,
+            subtitle_link: gallery.name
+        }
+    );
 });
 
 // REGISTER OUR ROUTES -------------------------------
