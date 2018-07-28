@@ -59,6 +59,10 @@ galleries:
         display_name: Screech Owl
         scientific_name: Megascops Asio
         medium: Tupelo & Acrylic
+      - name: great_horned_owl
+        display_name: Great Horned Owl
+        scientific_name: Bubo Virginianus
+        medium: Tupelo & Acrylic
   - name: songbirds
     display_name: Songbirds
     description: Songbirds.
