@@ -10,7 +10,7 @@ galleries:
       - name: blue_wing_teal
         display_name: Blue Winged Teal
         scientific_name: Spatula Discors
-        medium: Tupelo & Oil
+        medium: Tupelo & Oil on Ash
       - name: canada_goose
         display_name: Canada Goose
         scientific_name: Branta Canadensis
@@ -39,6 +39,10 @@ galleries:
     display_name: Raptors
     description: Birds of prey.
     pieces:
+      - name: screech_owl_3
+        display_name: Screech Owl
+        scientific_name: Megascops Asio
+        medium: Tupelo & Acrylic
       - name: kestral
         display_name: American Kestrel
         scientific_name: Falco Sparverius
