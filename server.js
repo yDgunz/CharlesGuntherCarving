@@ -10,21 +10,15 @@ var ENVIRONMENT = process.env.ENVIRONMENT || 'DEV';
 // call the packages we need
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
-var bodyParser = require('body-parser');
 var morgan       = require('morgan');
 var fs          = require('fs');
 var yaml      = require('js-yaml');
 
-// configure app to use bodyParser()
-// this will let us get the data from a POST
 app.use(morgan('dev')); // log every request to the console
-app.use(bodyParser()); // get information from html forms
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
 app.use(express.static('public'));
 app.set('view engine', 'ejs'); // set up ejs for templating
 
-var data = {galleryData: yaml.safeLoad(fs.readFileSync('gallery-data.yaml', 'utf8'))};
+var data = {galleryData: yaml.load(fs.readFileSync('gallery-data.yaml', 'utf8'))};
 
 // ROUTES FOR OUR API
 // =============================================================================

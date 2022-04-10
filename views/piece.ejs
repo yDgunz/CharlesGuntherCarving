@@ -1,4 +1,4 @@
-<% include header.ejs %>
+<%- include('header.ejs') %>
 
 <h4 class="raleway"><%= piece.display_name %> (<%= piece.scientific_name %>) - <%= piece.medium %></h4>
 
@@ -14,4 +14,4 @@
     <% }); %>
 </section>
 
-<% include footer.ejs %>
+<%- include('footer.ejs') %>
